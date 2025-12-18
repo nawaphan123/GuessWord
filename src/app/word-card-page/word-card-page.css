@@ -1,0 +1,100 @@
+.main-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listen-img {
+  object-fit: contain;
+  height: 50%;
+  width: 50%;
+}
+.button-tab {
+  margin-top: 15px;
+  display: flex;
+  min-width: 60vw;
+  min-height: 5vh;
+  /* background-color: rgb(255, 140, 127); */
+  justify-content: space-around;
+}
+button {
+  width: 100px;
+  height: 50px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(29, 126, 217);
+  color: azure;
+  font-weight: 500;
+  font-size: 100%;
+}
+h5 {
+  color: rgb(57, 57, 57);
+  font-weight: 400;
+}
+h1 {
+  text-align: center;
+  font-size: 400%;
+}
+h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+.flip-card {
+  /* overflow: hidden; */
+  background-color: transparent;
+  width: 60vw;
+  height: 70vh;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0.5px rgb(185, 185, 185);
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+
+  user-select: none;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Style the back side */
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,21 @@
+<div class="main-word">
+  <div class="flip-card" (click)="toggleFlip()">
+    <div class="flip-card-inner" [class.flipped]="isFlipped">
+      <div class="card-front">
+        <h1 style="font-size: 200px" (click)="opensound()">🔊</h1>
+        <h5>click to hear and reveal</h5>
+      </div>
+
+      <div class="card-back">
+        <h1>Upper-middle class</h1>
+        <h2>ชนชั้นกลางระดับสูง</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-tab">
+    <button>PREVIOUS</button>
+    <button>SHUFFLE🎲</button>
+    <button>NEXT</button>
+  </div>
+</div>
